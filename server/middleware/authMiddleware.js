@@ -10,7 +10,7 @@ const protect = (req, res, next) => {
       });
     }
 
-    console.log(authHeader);
+    
     const token = authHeader.split(" ")[1];
 
 const decoded = jwt.verify(
@@ -19,7 +19,6 @@ const decoded = jwt.verify(
 );
 req.user = decoded;
 console.log(req.user);
-
 
 
 next();
