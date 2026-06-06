@@ -1,1 +1,45 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes subtle-float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+#landing-particles {
+  position: absolute;
+  inset: 0;
+}
+
+.twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
