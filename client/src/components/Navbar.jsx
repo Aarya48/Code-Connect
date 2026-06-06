@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="w-full px-8 md:px-12 py-5 flex items-center justify-between text-white bg-black/20 backdrop-blur-md border-b border-purple-500/20 fixed top-0 z-50">
@@ -41,7 +41,10 @@ function Navbar() {
         whileTap={{ scale: 0.95 }}
         className="px-6 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 transition-all duration-300 font-semibold text-sm md:text-base"
       >
-        Get Started
+
+        <Link to="/register">
+  Get Started
+</Link>
       </motion.button>
     </nav>
   );

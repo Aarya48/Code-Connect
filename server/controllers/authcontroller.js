@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const registerUser = async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password,githubUsername } = req.body;
 const existingUser = await User.findOne({ email });
 
 if (existingUser) {
@@ -16,6 +16,7 @@ const hashedPassword = await bcrypt.hash(password, 10);
       name,
       email,
       password:hashedPassword,
+        githubUsername,
     });
 
     res.status(201).json({
