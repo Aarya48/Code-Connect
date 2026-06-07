@@ -146,7 +146,7 @@ function Landing() {
         <motion.h1
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="text-6xl md:text-7xl lg:text-8xl font-black bg-gradient-to-r from-purple-500 via-cyan-400 to-purple-600 bg-clip-text text-transparent leading-tight tracking-tight"
+          className="text-8xl md:text-7xl lg:text-8xl font-black bg-gradient-to-r from-purple-500 via-cyan-400 to-purple-600 bg-clip-text text-transparent leading-tight tracking-tight"
         >
           CodeConnect
         </motion.h1>

@@ -192,7 +192,7 @@ onChange={handleChange}
 
           <p className="text-center text-gray-400 mt-6">
             Already have an account?{" "}
-            <span className="text-cyan-400 cursor-pointer hover:text-cyan-300">
+            <span className="text-cyan-400 cursor-pointer hover:text-cyan-300"   onClick={() => navigate("/login")}>
               Login
             </span>
           </p>

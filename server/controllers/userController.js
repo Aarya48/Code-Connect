@@ -18,7 +18,7 @@ const user = await User.findById(
 
 const updateProfile = async (req, res) => {
   try {
-    const { bio, skills, githubUsername } = req.body;
+    const { bio, skills, githubUsername,profileImage } = req.body;
 
     const user = await User.findById(req.user.id);
 
@@ -31,6 +31,8 @@ const updateProfile = async (req, res) => {
     user.bio = bio || user.bio;
     user.skills = skills || user.skills;
     user.githubUsername = githubUsername || user.githubUsername;
+    user.profileImage =
+  profileImage || user.profileImage;
 
     await user.save();
 

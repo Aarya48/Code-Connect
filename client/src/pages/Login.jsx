@@ -38,6 +38,7 @@ function Login() {
       );
 
       alert("Login Successful");
+       navigate("/dashboard");
 
     } catch (error) {
       alert(
@@ -45,7 +46,7 @@ function Login() {
         "Account not found. Please register first."
       );
 
-      navigate("/register");
+     
     }
   };
 
