@@ -8,10 +8,16 @@ import {
   Settings,
   LogOut,
 } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 function Sidebar() {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+  localStorage.removeItem("token");
+
+  navigate("/login");
+};
   const menuItems = [
     {
       name: "Dashboard",
@@ -43,11 +49,7 @@ function Sidebar() {
       icon: <Search size={20} />,
       path: "/developers",
     },
-    {
-      name: "Settings",
-      icon: <Settings size={20} />,
-      path: "/settings",
-    },
+    
   ];
 
   return (
@@ -121,23 +123,28 @@ function Sidebar() {
       {/* Bottom Section */}
       <div className="p-4 border-t border-white/5">
         <button
-          className="
-          w-full
-          flex
-          items-center
-          gap-3
-          px-4
-          py-3
-          rounded-xl
-          text-red-400
-          hover:bg-red-500/10
-          transition-all
-          duration-300
-          "
-        >
-          <LogOut size={20} />
-          Logout
-        </button>
+  onClick={handleLogout}
+   className="
+  w-full
+  flex
+  items-center
+  gap-3
+  px-4
+  py-3
+  mt-6
+  rounded-xl
+  text-red-400
+  bg-red-500/10
+  border
+  border-red-500/20
+  hover:bg-red-500/20
+  hover:border-red-500/40
+  transition-all
+  duration-300
+  "
+>
+  Logout
+</button>
       </div>
     </aside>
   );

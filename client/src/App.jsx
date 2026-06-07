@@ -8,7 +8,7 @@ import Profile from "./pages/Profile"
  import MyProjects from "./pages/MyProjects";
  import EditProject from "./pages/EditProject";
 import Community from "./pages/Community";
-
+import ExploreDevelopers from "./pages/ExploreDevelopers";
 
 function App() {
   return <Routes>
@@ -27,6 +27,11 @@ function App() {
   element={<Community />}
 />
 
+
+<Route
+  path="/developers"
+  element={<ExploreDevelopers />}
+/>
 <Route
   path="/projects/edit/:id"
   element={<EditProject />}
