@@ -4,7 +4,7 @@ import Login from "./pages/Login"
 import Dashboard from "./pages/Dashboard"
 import { Routes, Route } from "react-router-dom"
 import Profile from "./pages/Profile"
- import AddProject from "./pages/AddProject";
+ import Addproject from "./pages/Addproject";
  import MyProjects from "./pages/MyProjects";
  import EditProject from "./pages/EditProject";
 import Community from "./pages/Community";
