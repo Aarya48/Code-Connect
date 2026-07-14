@@ -12,7 +12,7 @@ const [project, setProject] = useState({
   liveLink: "",
 });
 
-
+const navigate = useNavigate();
 const handleChange = (e) => {
   setProject({
     ...project,
