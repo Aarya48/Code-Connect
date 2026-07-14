@@ -39,7 +39,7 @@ function App() {
 
 <Route
   path="/projects/create"
-  element={<AddProject />}
+  element={<Addproject />}
 />
 </Routes>
 }
