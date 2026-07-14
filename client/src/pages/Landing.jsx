@@ -42,14 +42,13 @@ function ReadMore({ expandedContent }) {
   const [open, setOpen] = useState(false);
   const containerRef = useRef(null);
 
-  // Auto-scroll the expanded content into view when opened
+ 
   useEffect(() => {
     if (open && containerRef.current) {
       containerRef.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
   }, [open]);
 
-  // Split paragraphs on blank lines for clean formatting
   const paragraphs = String(expandedContent)
     .split(/\n\s*\n/)
     .map((p) => p.trim())
@@ -126,7 +125,7 @@ function Landing() {
         ))}
       </div>
 
-      {/* Badge */}
+    
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -136,7 +135,6 @@ function Landing() {
         🚀 Developer Collaboration Platform
       </motion.div>
 
-      {/* Heading - Animated & Smaller */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
